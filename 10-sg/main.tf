@@ -1,6 +1,6 @@
 module "sg"{
 
-     source = "git::https://github.com/dasariravi145/terraform-aws-sg.git"
+     source = "../../terraform-aws-sg"
      project = "roboshop"
      environment = "dev"
      sg_name = replace(var.sg_names[count.index], "_","-")
