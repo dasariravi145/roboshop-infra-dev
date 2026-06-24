@@ -10,7 +10,7 @@ terraform {
      }
      backend "s3" {
 
-            bucket="remote-state-aws-vpc-dev"
+            bucket="remote-roboshop-aws-vpc-dev"
             key = "roboshop-dev-sg"
             region = "us-east-1"
             encrypt = true
