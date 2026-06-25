@@ -1,30 +1,27 @@
 variable "project" {
-
-     default = "roboshop"
+    default = "roboshop"
 }
 
 variable "environment" {
-
-      default = "dev"
+    default = "dev"
 }
 
 variable "sg_names" {
-
-     type = list
-     default = [
-           #database
-           "mongodb","redis","mysql","rabbitmq",
-           #backend
-           "catalogue","user","cart","shipping","payment",
-           #Backend ALB
-           "backend_alb",
-           #Frontend
-           "frontend",
-           #Frontend_alb
-           "frontend_alb",
-           #Bastion
-           "bastion",
-           #openvpn
-           "openvpn"
-     ]
+    type = list
+    default = [
+        # Databases
+        "mongodb", "redis", "mysql", "rabbitmq",
+        # Backend
+        "catalogue", "user", "cart", "shipping", "payment",
+        # Backend ALB
+        "backend_alb",
+        # Frontend
+        "frontend",
+        # Frontend ALB
+        "frontend_alb",
+        # Bastion
+        "bastion",
+        # Openvpn
+        "openvpn"
+    ]
 }
