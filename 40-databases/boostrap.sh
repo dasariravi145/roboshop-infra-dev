@@ -1,0 +1,13 @@
+#!/bin/bash
+
+component=$1
+environment=$2
+dnf insatll ansible -y
+
+cd /home/ec2-user
+
+git clone https://github.com/daws-88s/ansible-roboshop-roles-tf.git
+
+cd ansible-roboshop-roles-tf
+
+ansible-playbook -e component=$component environment=$environment roboshop.yaml 
